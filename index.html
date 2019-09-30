@@ -1,0 +1,50 @@
+<header>
+        <script src="http://localhost:8002/socket.io/socket.io.js"></script>
+    <title>
+        多人数で行うポーカー
+    </title>
+        <link rel="stylesheet" type="text/css" href="index.css">
+</header>
+<body>
+        <div class="a" style="padding: 10px;height:500px;width:500px;  margin-bottom: 10px; border: 1px solid #333333;background-color: #32ff32;">
+        <div class="box5"></div>
+        <div id="box1"class="box1"></div>
+       <div id="box2"class="box2"></div>
+       <div class="box3">
+
+            <div class="vbox1"><img id="deck" src="card/card_back.png" width=50 height=80; style="position:relative;top:30%;left:10%;"></div>
+            <div class="vbox2"><img id="dis"  width=50 height=80; style="position:relative;top:30%;left:10%;border:solid 2px #ff9100"></div>
+       </div>
+       <div id="box4" class="box4"></div>
+       <div class="box5"></div>
+        <div class="box6">
+            <div id ="result"class ="result"></div>
+            <div class="hands">
+            <img id="no1" onclick="change(this)" src="card/card_back.png" width=50 height=80; style="pointer-events:none">
+            <img id="no2" onclick="change(this)" src="card/card_back.png" width=50 height=80; style="pointer-events:none">
+            <img id="no3" onclick="change(this)" src="card/card_back.png" width=50 height=80; style="pointer-events:none">
+            <img id="no4" onclick="change(this)" src="card/card_back.png" width=50 height=80; style="pointer-events:none">
+            <img id="no5" onclick="change(this)" src="card/card_back.png" width=50 height=80; style="pointer-events:none">
+        </div>
+        </div>
+        <div class="box7">
+       <div id="ex" class="hbox1"></div>
+       <div id="ok" class="hbox2"> <p style="position: relative; top:0%;left:30%"></p></div>
+        </div>
+
+    </div>
+        <div class="b">
+        <text id="pass" style="position:absolute;top:10px;left:540px ;padding: 10px;height:400px;width:200px;  margin-bottom: 10px; border: 1px solid #333333;background-color: #ffffff; overflow: scroll;">
+        <font size="1">
+        操作ログ<br>
+        --------------------<br>
+        </font>
+        </text>
+        <button  id="join"  style="position: absolute; top:480px; left:540px;"onclick="join()">ポーカー参加</button>
+        <button  id="start" style="position: absolute; top:480px; left:640px; "onclick="start()" disabled>開始</button>
+        </div>
+        <div id="game_result">戦績<br></div>
+        <script src="client_connection.js"></script>
+       <script src="check.js"></script>
+        <script src="change.js"></script>
+</body>
